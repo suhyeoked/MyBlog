@@ -1,0 +1,46 @@
+header {
+  width: 100%;
+}
+
+.naviBa {
+  background-color: black;
+  padding: 30px;
+  font-size: 2em;
+}
+.naviBa > a {
+  color: white;
+  text-decoration: none;
+}
+.Blog{
+  border-bottom: 1px solid gray;
+  padding: 20px;
+}
+
+.BlogTitle {
+  display: flex;
+  align-items: center;
+}
+
+.GoodBtn {
+  margin: 0 20px;
+
+}
+.GoodBtn > button {
+  cursor: pointer;
+}
+
+.BlogFooter {
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%, 0);
+  bottom: 6%;
+  padding: 10px;
+  background-color: black;
+  border-radius: 10%;
+  cursor: pointer;
+}
+
+.BlogFooter > div > a {
+  color: white;
+  text-decoration: none;
+}
