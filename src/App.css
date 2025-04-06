@@ -7,6 +7,7 @@ header {
   padding: 30px;
   font-size: 2em;
 }
+
 .naviBa > a {
   color: white;
   text-decoration: none;
@@ -19,6 +20,11 @@ header {
 .BlogTitle {
   display: flex;
   align-items: center;
+}
+
+.BlogTitle > a {
+  text-decoration: none;
+  color: black;
 }
 
 .GoodBtn {
@@ -40,7 +46,9 @@ header {
   cursor: pointer;
 }
 
-.BlogFooter > div > a {
+.BlogFooter > a {
   color: white;
+  background-color: black;
   text-decoration: none;
+  font-size: 1em;
 }
