@@ -8,8 +8,10 @@ function App() {
   let [title, setTitle] = useState<string[]>(["예시 1"]);
   let [blogBody , setBlogBody] = useState<string[]>([])
   let [good, setGood] = useState<number[]>(new Array(title.length).fill(0));
-  let [isWriting, setIsWriting] = useState<boolean>(false);
-  
+  let [isWriting] = useState<boolean>(false);
+  let [blogTitleText , setBlogTitleText] = useState<string>("");
+  let [blogBodyText , setBlogBodyText] = useState<string>("")
+
   return (
     <>
       <NabiBa />
@@ -49,6 +51,10 @@ function App() {
           setTitle={setTitle} 
           blogBody={blogBody} 
           setBlogBody={setBlogBody}
+          blogBodyText= {blogBodyText}
+          setBlogBodyText = {setBlogBodyText}
+          blogTitleText = {blogTitleText}
+          setBlogTitleText = {setBlogTitleText}
         />
       )}
       </section>
