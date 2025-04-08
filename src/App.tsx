@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
 import './App.css';
 import NabiBa from './component/NabiBa';
-import { Link } from "react-router-dom";
-import BlogWriting from './component/BlogWriting';
+import { Link, useLocation } from "react-router-dom";
+
 
 function App() {
+  const location = useLocation();
   let [title, setTitle] = useState<string[]>(["예시 1"]);
   let [blogBody , setBlogBody] = useState<string[]>([])
   let [good, setGood] = useState<number[]>(new Array(title.length).fill(0));
-  let [isWriting] = useState<boolean>(false);
-  let [blogTitleText , setBlogTitleText] = useState<string>("");
-  let [blogBodyText , setBlogBodyText] = useState<string>("")
+  // let [blogTitleText , setBlogTitleText] = useState<string>("");
+  // let [blogBodyText , setBlogBodyText] = useState<string>("")
 
   return (
     <>
@@ -42,21 +42,12 @@ function App() {
         })
       }
       <section className="BlogFooter">
-        <Link to = "./BlogWriting" target="_blank">
+        <Link to ={{ 
+          pathname : "/BlogWriting" ,
+          state: {title , blogBody}
+          }}>
           글쓰기
           </Link>
-      {isWriting && (
-        <BlogWriting 
-          title={title} 
-          setTitle={setTitle} 
-          blogBody={blogBody} 
-          setBlogBody={setBlogBody}
-          blogBodyText= {blogBodyText}
-          setBlogBodyText = {setBlogBodyText}
-          blogTitleText = {blogTitleText}
-          setBlogTitleText = {setBlogTitleText}
-        />
-      )}
       </section>
     </>
   );
